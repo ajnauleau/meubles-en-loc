@@ -5,7 +5,7 @@ class MeublesController < ApplicationController
   end
 
   def show
-      
+
   end
 
   def new
