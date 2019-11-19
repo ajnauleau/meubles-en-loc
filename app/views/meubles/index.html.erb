@@ -1,0 +1,14 @@
+<h1>Meubles index</h1>
+
+<% @meubles.each do |meuble| %>
+<li>
+  <%= meuble.name %>
+  <br>
+  <%= meuble.daily_rate %>
+  <br>
+  <%# meuble.photo_id %>
+  <br>
+  <%= link_to 'Show', meuble_path(meuble) %>
+</li>
+<% end %>
+
