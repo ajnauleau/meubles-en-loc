@@ -6,19 +6,19 @@
   padding: 300px;
 }
 
-.btn-flat {
+.btn-flat.my-btn {
   color: white;
   padding: 32px 96px;
   border-radius: 4px;
-  background: #0d636d;
+  background-color: #0d636d;
   transition:0.5s;
   font-size: 20px;
   margin: 30px
 }
 
-.btn-flat:hover {
+.btn-flat.my-btn:hover {
   color: white;
-background: #5a1848
+  background: #5a1848;
 }
 
 .boutons {
