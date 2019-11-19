@@ -9,4 +9,7 @@ class Meuble < ApplicationRecord
   validates :width, presence:true
   validates :length, presence:true
   validates :daily_rate, presence:true
+  def info
+    "#{self.height}"
+  end
 end
