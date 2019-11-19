@@ -1,4 +1,29 @@
-// Specific CSS for your home-page
-.card-container {
-  height: 300px;
+
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
 }
+
+.btn-flat {
+  color: white;
+  padding: 32px 96px;
+  border-radius: 4px;
+  background: #0d636d;
+  transition:0.5s;
+  font-size: 20px;
+  margin: 30px
+}
+
+.btn-flat:hover {
+  color: white;
+background: #5a1848
+}
+
+.boutons {
+  display: flex;
+  justify-content: center;
+
+}
+
