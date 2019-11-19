@@ -1,0 +1,14 @@
+<div class="container">
+<%= simple_form_for(@meuble) do |f| %>
+  <%= f.input :category, collection: Meuble::CATEGORIES %>
+  <%= f.input :height %>
+  <%= f.input :width %>
+  <%= f.input :length %>
+  <%= f.input :daily_rate %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit "Add a new furniture", class: "btn btn-primary" %>
+<% end %>
+
+</div>
