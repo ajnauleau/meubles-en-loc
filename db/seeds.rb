@@ -12,7 +12,7 @@ meubles_attributes = [
 
   {
     name:         'Canapé d angle',
-    category:     'Living Room',
+    category:     'Bedroom',
     description:  'Canapé vintage en cuir blanc des années 80',
     height:        100,
     width:         600,
