@@ -37,23 +37,22 @@
           <p><%= @meuble.description %></p>
           <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
           <p><%= @meuble.daily_rate %>€</p>
-        
-          <div class="container">
+
             <div class="form-wrapper">
               <%= simple_form_for([@meuble, Location.new]) do |t| %>
               <%#= t.input :start_date, input_html: { class: "datepicker" } %>
-              <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "lock" %>
+              <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "Date" %>
               <%= t.submit "Go", class: 'btn btn-primary '%>
             <% end %>
             </div>
-          </div>
+
         </div>
         
         
         
        
 
-        <a href="/meubles"><div class="btn btn-primary mt-4"> Back </div></a>
+        <a href="/meubles"><div class="btn btn-primary m-4"> Back </div></a>
 
       </div>
 
