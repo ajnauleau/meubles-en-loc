@@ -1,8 +1,11 @@
 <div class="container mt-2">
   <div class="container card-container mt-2">
     <div class="row">
+    <%# @meuble.photos.each do |photo| %>
+      <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <%# end %>
 
-    <div class="furniture-pic col-4">
+    <div class="furniture-pic col-6">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -26,16 +29,24 @@
       </div>
     </div>
 
-    <div class="furniture-description col-8">
+    <div class="furniture-description col-6">
       <p><%= @meuble.name %></p>
       <p><%= @meuble.description %></p>
       <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
-      <p><%= @meuble.info %></p>
       <p><%= @meuble.daily_rate %>€</p>
+<!--       <button type="button" class="btn btn-secondary btn-lg">Lock</button> -->
+
+        <div class="input-group date" data-provide="datepicker">
+          <input type="text" class="form-control">
+          <div class="input-group-addon">
+          <span class="glyphicon glyphicon-th"></span>
+          </div>
+        </div>
     </div>
 
     </div>
-
-
   </div>
 </div>
+
+
+

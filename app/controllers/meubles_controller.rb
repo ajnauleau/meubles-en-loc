@@ -16,6 +16,7 @@ class MeublesController < ApplicationController
 
   def create
     @meuble = Meuble.new(meuble_params)
+    @meuble.user = current_user
     @meuble.save
     redirect_to meuble_path(@meuble)
   end
@@ -28,7 +29,7 @@ class MeublesController < ApplicationController
   private
 
   def meuble_params
-    params.require(:meuble).permit(:category, :description, :height, :width, :length, :daily_rate)
+    params.require(:meuble).permit(:name, :category, :description, :height, :width, :length, :daily_rate, photos: [])
   end
 
 =begin
