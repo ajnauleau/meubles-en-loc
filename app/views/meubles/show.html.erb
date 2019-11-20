@@ -29,22 +29,29 @@
           </a>
         </div>
       </div>
-
-      <div class="furniture-description col-6">
-        <%#= cl_image_tag @meuble.photo.key, height: 300, width: 400, crop: :fill  %>
-        <%#= image_tag "home.jpg", height: 300, width: 400, alt: "alttext" %>
-        <h1><%= @meuble.name %></h1>
-        <p><%= @meuble.description %></p>
-        <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
-        <p><%= @meuble.daily_rate %>€</p>
-  <!--       <button type="button" class="btn btn-secondary btn-lg">Lock</button> -->
-
-          <div class="input-group date" data-provide="datepicker">
-            <input type="text" class="form-control">
-            <div class="input-group-addon">
-            <span class="glyphicon glyphicon-th"></span>
+        
+        <div class="furniture-description col-6">
+          <%#= cl_image_tag @meuble.photo.key, height: 300, width: 400, crop: :fill  %>
+          <%#= image_tag "home.jpg", height: 300, width: 400, alt: "alttext" %>
+          <h1><%= @meuble.name %></h1>
+          <p><%= @meuble.description %></p>
+          <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
+          <p><%= @meuble.daily_rate %>€</p>
+        
+          <div class="container">
+            <div class="form-wrapper">
+              <%= simple_form_for([@meuble, Location.new]) do |t| %>
+              <%#= t.input :start_date, input_html: { class: "datepicker" } %>
+              <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "lock" %>
+              <%= t.submit "Go", class: 'btn btn-primary '%>
+            <% end %>
             </div>
           </div>
+        </div>
+        
+        
+        
+       
 
         <a href="/meubles"><div class="btn btn-primary mt-4"> Back </div></a>
 
