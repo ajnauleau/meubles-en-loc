@@ -1,7 +1,7 @@
 class Meuble < ApplicationRecord
   CATEGORIES = ["Bathroom", "Bedroom", "Kitchen", "Living Room", "Kids"]
   belongs_to :user
-  has_many :locations
+  has_many :locations, dependent: :destroy
   has_one_attached :photo
   validates :category, inclusion: { in: CATEGORIES }
   validates :description, presence:true
