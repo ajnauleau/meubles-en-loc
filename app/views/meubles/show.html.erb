@@ -1,51 +1,56 @@
-<div class="container mt-2">
-  <div class="container card-container mt-2">
-    <div class="row">
-    <%# @meuble.photos.each do |photo| %>
-      <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <%# end %>
+<div class="card p-4 mt-2">
+  <div class="container mt-2">
+    <div class="container card-container mt-2">
+      <div class="row">
+      <%# @meuble.photos.each do |photo| %>
+        <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <%# end %>
 
-    <div class="furniture-pic col-6">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
+      <div class="furniture-pic col-6">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "canape_2.jpg", height: 350, width: 500, alt: "alttext" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
+            </div>
           </div>
-          <div class="carousel-item">
-            <%= image_tag "canape_2.jpg", height: 350, width: 500, alt: "alttext" %>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
-          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-    </div>
 
-    <div class="furniture-description col-6">
-      <%#= cl_image_tag @meuble.photo.key, height: 300, width: 400, crop: :fill  %>
-      <%#= image_tag "home.jpg", height: 300, width: 400, alt: "alttext" %>
-      <h1><%= @meuble.name %></h1>
-      <p><%= @meuble.description %></p>
-      <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
-      <p><%= @meuble.daily_rate %>€</p>
-<!--       <button type="button" class="btn btn-secondary btn-lg">Lock</button> -->
+      <div class="furniture-description col-6">
+        <%#= cl_image_tag @meuble.photo.key, height: 300, width: 400, crop: :fill  %>
+        <%#= image_tag "home.jpg", height: 300, width: 400, alt: "alttext" %>
+        <h1><%= @meuble.name %></h1>
+        <p><%= @meuble.description %></p>
+        <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
+        <p><%= @meuble.daily_rate %>€</p>
+  <!--       <button type="button" class="btn btn-secondary btn-lg">Lock</button> -->
 
-        <div class="input-group date" data-provide="datepicker">
-          <input type="text" class="form-control">
-          <div class="input-group-addon">
-          <span class="glyphicon glyphicon-th"></span>
+          <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control">
+            <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+            </div>
           </div>
-        </div>
-    </div>
 
+        <a href="/meubles"><div class="btn btn-primary mt-4"> Back </div></a>
+
+      </div>
+
+      </div>
     </div>
   </div>
 </div>
