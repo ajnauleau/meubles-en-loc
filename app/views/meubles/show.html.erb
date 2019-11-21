@@ -17,16 +17,12 @@
     <div class="furniture-pic col-6">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%#= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
-          </div>
-          <div class="carousel-item">
-            <%#= image_tag "canape_2.jpg", height: 350, width: 500, alt: "alttext" %>
-          </div>
-          <div class="carousel-item">
-            <%#= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
-          </div>
-          <%= image_tag url_for(@meuble.photo), width: '300px' %>
+           <% @meuble.photos.each_with_index do |photo, index| %>
+              <div class="carousel-item <%= 'active' if index==0 %>">
+                <%= cl_image_tag photo.key, height: 250, width: 400, crop: :fill %>
+              <%#= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
+              </div>
+              <% end %>
 
         </div>
       </div>
