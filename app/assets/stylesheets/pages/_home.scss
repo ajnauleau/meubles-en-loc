@@ -13,12 +13,12 @@
   background-color: #0d636d;
   transition:0.5s;
   font-size: 20px;
-  margin: 30px
-}
+  margin: 30px;
 
-.btn-flat.my-btn:hover {
+  &:hover {
   color: white;
   background: #5a1848;
+  }
 }
 
 .boutons {
