@@ -22,7 +22,7 @@ puts 'Creating meubles...'
     length:        1200,
     daily_rate:    10,
     disponibility: true,
-    user:          kevin)
+    user:          User.first)
 
 canape_1 = URI.open('https://res.cloudinary.com/dwu8ckzto/image/upload/v1574335577/canape_1_c4uvgg.jpg')
 canape.photos.attach(io: canape_1, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -42,7 +42,7 @@ canape.save
     length:        100,
     daily_rate:    5,
     disponibility: true,
-    user:          kevin)
+    user:          User.first)
 
 rocking_chair_1 = URI.open('https://res.cloudinary.com/dwu8ckzto/image/upload/v1574335578/rocking_chair_1_rprvzs.jpg')
 rocking_chair.photos.attach(io: rocking_chair_1, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -61,7 +61,7 @@ rocking_chair.save
     length:        100,
     daily_rate:    10,
     disponibility: true,
-    user:          kevin)
+    user:          User.first)
 
 lamp_1 = URI.open('https://res.cloudinary.com/dwu8ckzto/image/upload/v1574335576/lamp_1_mpje4v.jpg')
 lamp.photos.attach(io: lamp_1, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -80,7 +80,7 @@ lamp.save
     length:        100,
     daily_rate:    50,
     disponibility: true,
-    user:          kevin)
+    user:          User.first)
 
 cuisiniere_1 = URI.open('https://res.cloudinary.com/dwu8ckzto/image/upload/v1574335576/cuisiniere_1_f6mddu.jpg')
 cuisiniere.photos.attach(io: cuisiniere_1, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -99,7 +99,7 @@ cuisiniere.save
     length:        100,
     daily_rate:    15,
     disponibility: true,
-    user:          kevin)
+    user:          User.first)
 
 baignoire_1 = URI.open('https://res.cloudinary.com/dwu8ckzto/image/upload/v1574335575/baignoire_1_z4jlce.jpg')
 baignoire.photos.attach(io: baignoire_1, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -118,7 +118,7 @@ baignoire.save
     length:        100,
     daily_rate:    2,
     disponibility: true,
-    user:          kevin)
+    user:          User.first)
 
 tipi_1 = URI.open('https://res.cloudinary.com/dwu8ckzto/image/upload/v1574335575/tipi_1_ixt114.jpg')
 tipi.photos.attach(io: tipi_1, filename: 'some-image.jpg', content_type: 'image/jpg')

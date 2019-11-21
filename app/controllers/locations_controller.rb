@@ -11,7 +11,7 @@ class LocationsController < ApplicationController
     @location.end_date = end_date
 
     @location.save!
-    redirect_to meubles_path(@meuble)
+    redirect_to profil_path
   end
 
   private
