@@ -18,7 +18,7 @@ class MeublesController < ApplicationController
     @meuble = Meuble.new(meuble_params)
     @meuble.user = current_user
     @meuble.save!
-    redirect_to meuble_path(@meuble)
+    redirect_to profil_path
   end
 
   def filter
