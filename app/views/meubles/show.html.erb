@@ -2,9 +2,9 @@
   <div class="container mt-2">
     <div class="container card-container mt-2">
       <div class="row">
-      <%# @meuble.photos.each do |photo| %>
-        <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-      <%# end %>
+      <% @meuble.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
 
       <div class="furniture-pic col-6">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -29,7 +29,7 @@
           </a>
         </div>
       </div>
-        
+
         <div class="furniture-description col-6">
           <%#= cl_image_tag @meuble.photo.key, height: 300, width: 400, crop: :fill  %>
           <%#= image_tag "home.jpg", height: 300, width: 400, alt: "alttext" %>
@@ -37,7 +37,7 @@
           <p><%= @meuble.description %></p>
           <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
           <p><%= @meuble.daily_rate %>€</p>
-        
+
           <div class="container">
             <div class="form-wrapper">
               <%= simple_form_for([@meuble, Location.new]) do |t| %>
@@ -48,10 +48,10 @@
             </div>
           </div>
         </div>
-        
-        
-        
-       
+
+
+
+
 
         <a href="/meubles"><div class="btn btn-primary mt-4"> Back </div></a>
 

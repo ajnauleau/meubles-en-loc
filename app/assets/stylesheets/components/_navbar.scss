@@ -15,7 +15,20 @@
   font-size: 70px;
   color: #3c434a;
   font-family: 'Lobster', cursive;
+}
 
+.btn-flat.my-btn-navbar {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #0d636d;
+  transition:0.5s;
+  font-size: 16px;
 
+  &:hover {
+  color: white;
+  background: #5a1848;
   }
+}
+
 
