@@ -1,3 +1,4 @@
+
 <div class="card p-4 mt-2">
   <div class="container mt-2">
     <div class="container card-container mt-2">
@@ -6,27 +7,28 @@
         <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
       <% end %>
 
-      <div class="furniture-pic col-6">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <%= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag "canape_2.jpg", height: 350, width: 500, alt: "alttext" %>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
-            </div>
+
+<div class="container mt-2">
+  <div class="container card-container mt-2">
+    <div class="row">
+    <%# @meuble.photos.each do |photo| %>
+      <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <%# end %>
+
+    <div class="furniture-pic col-6">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%#= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="carousel-item">
+            <%#= image_tag "canape_2.jpg", height: 350, width: 500, alt: "alttext" %>
+          </div>
+          <div class="carousel-item">
+            <%#= image_tag "canape_1.jpg", height: 350, width: 500, alt: "alttext" %>
+          </div>
+          <%= image_tag url_for(@meuble.photo), width: '300px' %>
+
         </div>
       </div>
 
@@ -38,22 +40,23 @@
           <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
           <p><%= @meuble.daily_rate %>€</p>
 
+
           <div class="container">
             <div class="form-wrapper">
               <%= simple_form_for([@meuble, Location.new]) do |t| %>
               <%#= t.input :start_date, input_html: { class: "datepicker" } %>
-              <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "lock" %>
+              <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "Date" %>
               <%= t.submit "Go", class: 'btn btn-primary '%>
             <% end %>
             </div>
-          </div>
+
         </div>
 
 
 
 
 
-        <a href="/meubles"><div class="btn btn-primary mt-4"> Back </div></a>
+        <a href="/meubles"><div class="btn btn-primary m-4"> Back </div></a>
 
       </div>
 
