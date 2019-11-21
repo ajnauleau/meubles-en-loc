@@ -29,7 +29,7 @@ class MeublesController < ApplicationController
   private
 
   def meuble_params
-    params.require(:meuble).permit(:name, :category, :description, :height, :width, :length, :daily_rate, :photos)
+    params.require(:meuble).permit(:name, :category, :description, :height, :width, :length, :daily_rate, photos: [])
   end
 
 =begin
