@@ -18,7 +18,7 @@ class MeublesController < ApplicationController
     @meuble = Meuble.new(meuble_params)
     @meuble.user = current_user
     @meuble.save!
-    redirect_to meuble_path(@meuble)
+    redirect_to profil_path
   end
 
   def filter
@@ -29,7 +29,7 @@ class MeublesController < ApplicationController
   private
 
   def meuble_params
-    params.require(:meuble).permit(:name, :category, :description, :height, :width, :length, :daily_rate, :photo)
+    params.require(:meuble).permit(:name, :category, :description, :height, :width, :length, :daily_rate, :photos)
   end
 
 =begin
