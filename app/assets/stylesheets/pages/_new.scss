@@ -1,0 +1,12 @@
+.background-form {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.background-new {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  image_url("home.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 136px;
+}
