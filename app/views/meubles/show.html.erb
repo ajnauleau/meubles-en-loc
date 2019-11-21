@@ -1,3 +1,11 @@
+<div class="background p-4 mt-2">
+  <div class="container mt-2">
+    <div class="container card-container mt-2">
+      <div class="row">
+      <% @meuble.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+
 
 <div class="container mt-2">
   <div class="container card-container mt-2">
@@ -27,6 +35,8 @@
           <p><%= "#{@meuble.height}, #{@meuble.width}, #{@meuble.length}" %></p>
           <p><%= @meuble.daily_rate %>€</p>
 
+
+          <div class="container">
             <div class="form-wrapper">
               <%= simple_form_for([@meuble, Location.new]) do |t| %>
               <%#= t.input :start_date, input_html: { class: "datepicker" } %>
