@@ -13,7 +13,7 @@ class LocationsController < ApplicationController
 
 
     if @location.save
-      redirect_to profil_path
+      redirect_to profile_path
     else
       # redirect_to meuble_path(@location.meuble)
 

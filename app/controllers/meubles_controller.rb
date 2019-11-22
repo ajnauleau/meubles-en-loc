@@ -20,7 +20,7 @@ class MeublesController < ApplicationController
     @meuble.user = current_user
 
     if @meuble.save
-      redirect_to profil_path
+      redirect_to profile_path
     else
       render :new
     end
