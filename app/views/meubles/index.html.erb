@@ -6,8 +6,8 @@
       <div class="col-4 col-md-6 col-lg-8">
         <form action="/meubles/filter" method="post">
           <%= simple_form_for(@meuble) do |f| %>
-            <h3>  <%= f.input :category, collection: Meuble::CATEGORIES %> </h3>
-            <h3> <%= f.input :daily_rate %> </h3>
+            <%= f.input :category, collection: Meuble::CATEGORIES, label: false, prompt: 'category' %>
+            <%= f.input :daily_rate, label: false, placeholder: 'daly rate' %>
             <%= f.submit class:'btn btn-flat my-btn-navbar', value:'Search'%>
           <% end %>
         </form>
