@@ -41,9 +41,12 @@
           <!--       <button type="button" class="btn btn-secondary btn-lg">Lock</button> -->
 
             <div class="form-wrapper">
-              <%= simple_form_for([@meuble, Location.new]) do |t| %>
-                <%#= t.input :start_date, input_html: { class: "datepicker" } %>
-                <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "Date  " %>
+
+
+
+              <%= simple_form_for([@meuble, @location]) do |t| %>
+                <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: false, placeholder: "Required Delivery Date" %>
+
                 <%= t.submit "Go", class: 'btn btn-flat my-btn-navbar'%>
               <% end %>
             </div>

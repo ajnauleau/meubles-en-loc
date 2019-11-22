@@ -3,6 +3,7 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
     @location.user = current_user
     @location.meuble = Meuble.find(params[:meuble_id])
+    @meuble = Meuble.find(params[:meuble_id])
 
     start_date = params[:location][:end_date].split('to')[0]
     end_date = params[:location][:end_date].split('to')[1]
@@ -10,8 +11,14 @@ class LocationsController < ApplicationController
     @location.start_date = start_date
     @location.end_date = end_date
 
-    @location.save!
-    redirect_to profil_path
+
+    if @location.save
+      redirect_to profile_path
+    else
+      # redirect_to meuble_path(@location.meuble)
+
+      render "meubles/show"
+    end
   end
 
   private
