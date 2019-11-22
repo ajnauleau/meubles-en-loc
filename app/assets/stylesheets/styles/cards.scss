@@ -5,4 +5,13 @@
   background-color: white;
 }
 
+.block {
+  display: block;
+}
+
+.linear-grid {
+  display: grid;
+  grid-template: repeat(6, 1fr) / 600px ; //repeat(3, 1fr)
+}
+
 

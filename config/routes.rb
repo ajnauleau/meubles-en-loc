@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get '/profil', to: 'dashboards#profil'
+  get '/profile', to: 'dashboards#profile'
   resources :meubles, only:[:index, :show, :new, :create] do
     resources :locations, only: [:create]
 

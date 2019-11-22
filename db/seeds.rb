@@ -14,9 +14,9 @@ puts 'Creating meubles...'
 
 
   canape = Meuble.new(
-    name:         'Canapé d\'angle',
+    name:         'Couch',
     category:     'Bedroom',
-    description:  'Canapé vintage en cuir blanc des années 80',
+    description:  'Pretty blue couch for 5 people',
     height:        100,
     width:         600,
     length:        1200,
@@ -36,7 +36,7 @@ canape.save
   rocking_chair = Meuble.create!(
     name:         'Rocking chair',
     category:     'Living Room',
-    description:  'Magnifique rocking chair en osier',
+    description:  'Charming vintage rocking chair',
     height:        80,
     width:         250,
     length:        100,
@@ -55,7 +55,7 @@ rocking_chair.save
   lamp = Meuble.create!(
     name:         'Lamp',
     category:     'Living Room',
-    description:  'Lampe sur pied en inox',
+    description:  'Opalin scandinave lamp',
     height:        80,
     width:         250,
     length:        100,
@@ -72,9 +72,9 @@ lamp.photos.attach(io: lamp_3, filename: 'some-image.jpg', content_type: 'image/
 lamp.save
 
   cuisiniere = Meuble.create!(
-    name:         'Cuisinière',
+    name:         'Gas stove',
     category:     'Kitchen',
-    description:  'Cuisinière au gaz',
+    description:  'Luxury gas stove to cook delicious meals',
     height:        80,
     width:         250,
     length:        100,
@@ -91,9 +91,9 @@ cuisiniere.photos.attach(io: cuisiniere_3, filename: 'some-image.jpg', content_t
 cuisiniere.save
 
   baignoire = Meuble.create!(
-    name:         'Baignoire',
+    name:         'Vintage bathtub',
     category:     'Bathroom',
-    description:  'Baignoire à l\'ancienne',
+    description:  'Perfect to make your bathroom as a spa',
     height:        80,
     width:         250,
     length:        100,
@@ -110,9 +110,9 @@ baignoire.photos.attach(io: baignoire_3, filename: 'some-image.jpg', content_typ
 baignoire.save
 
   tipi = Meuble.create!(
-    name:         'Tipi',
+    name:         'Teepee',
     category:     'Kids',
-    description:  'Cabane indienne pour les enfants',
+    description:  'Teepee as a bed for kids',
     height:        80,
     width:         250,
     length:        100,

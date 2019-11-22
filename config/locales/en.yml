@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      location:
+        end_date: "Please select starting and ending dates"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "is required"
