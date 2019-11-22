@@ -23,7 +23,7 @@
           <div class="pb-3">
                 <%= f.input :daily_rate, placeholder: 'Price', label: false %>
                 <%= f.input :description, placeholder: 'Description', label: false %>
-                <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false %>
+                <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false, %>
                 <%= f.submit "Add a new furniture", class: "btn btn-flat my-btn-navbar", label: false %>
           </div>
       <% end %>

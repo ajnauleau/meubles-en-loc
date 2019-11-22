@@ -1,36 +1,3 @@
-<!--<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-4 col-md-6 col-lg-8">
-      <form action="/meubles/filter" method="post">
-        <%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <h2 class="text-center m-5">Filter your search</h2>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="provider">Category</label>
-            <select id="provider" name="category" class="form-control">
-              <option value="Bathroom">Bathroom</option>
-              <option value="Bedroom">Bedroom</option>
-              <option value="Kitchen">Kitchen</option>
-              <option value="Living room">Living Room</option>
-              <option value="Kids">Kids</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f_name">Description</label>
-            <input type="text" id="description" placeholder="Description" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="l_name">Price</label>
-            <input type="text" id="price" placeholder="price" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="submit" value="Search" class="btn btn-primary btn-lg w-100">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>-->
 <div class="background">
   <div class="border">
     <div class="container">
@@ -39,8 +6,8 @@
           <form action="/meubles/filter" method="post">
             <h2 class="text-center m-5">Filter your search</h2>
             <%= simple_form_for(@meuble) do |f| %>
-              <%= f.input :category, collection: Meuble::CATEGORIES %>
-              <%= f.input :daily_rate %>
+              <%= f.input :category, collection: Meuble::CATEGORIES, label: false, prompt: 'category' %>
+              <%= f.input :daily_rate, label: false, placeholder: 'daily_rate' %>
               <%= f.submit class:'btn btn-flat my-btn-navbar', value:'Search' %>
             <% end %>
           </form>
