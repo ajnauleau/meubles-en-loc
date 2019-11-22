@@ -18,6 +18,7 @@ class MeublesController < ApplicationController
   def create
     @meuble = Meuble.new(meuble_params)
     @meuble.user = current_user
+
     if @meuble.save
       redirect_to profil_path
     else

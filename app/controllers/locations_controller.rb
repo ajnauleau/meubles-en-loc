@@ -11,6 +11,7 @@ class LocationsController < ApplicationController
     @location.start_date = start_date
     @location.end_date = end_date
 
+
     if @location.save
       redirect_to profil_path
     else
