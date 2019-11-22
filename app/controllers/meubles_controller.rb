@@ -9,6 +9,7 @@ class MeublesController < ApplicationController
   def show
     @meuble = Meuble.find(params[:id])
     @location = Location.new
+    @meubles = Meuble.take(2)
   end
 
   def new
