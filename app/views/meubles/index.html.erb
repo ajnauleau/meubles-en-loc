@@ -8,7 +8,7 @@
           <%= simple_form_for(@meuble) do |f| %>
             <%= f.input :category, collection: Meuble::CATEGORIES %>
             <%= f.input :daily_rate %>
-            <%= f.submit class:'btn btn-primary', value:'Search'%>
+            <%= f.submit class:'btn btn-flat my-btn-navbar', value:'Search'%>
           <% end %>
         </form>
       </div>

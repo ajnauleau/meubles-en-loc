@@ -42,13 +42,13 @@
               <%= simple_form_for([@meuble, Location.new]) do |t| %>
                 <%#= t.input :start_date, input_html: { class: "datepicker" } %>
                 <%= t.input :end_date, as: :string, input_html: { class: "datepicker" }, label: "Date" %>
-                <%= t.submit "Go", class: 'btn btn-primary '%>
+                <%= t.submit "Go", class: 'btn btn-flat my-btn-navbar'%>
               <% end %>
             </div>
 
         </div>
 
-        <a href="/meubles"><div class="btn btn-primary m-4"> Back </div></a>
+        <a href="/meubles"><div class="btn btn-flat my-btn-navbar m-4"> Back </div></a>
 
       </div>
     </div>
