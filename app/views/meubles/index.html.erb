@@ -23,23 +23,31 @@
   </div>
 
 
-  <div class="container p-4">
+  <div class="container p-6">
     <div class="row d-flex justify-content-center">
       <% @meubles.each do |meuble| %>
-        <div class="cards d-flex justify-content-between col-xs-3 col-md-4 m-2 p-2">
-            <div class="d-flex flex-column">
-              <p><strong><%= meuble.name %></strong></p>
-              <p><%= meuble.daily_rate %> Euros</p>
-              <p><%= meuble.category %></p>
-              <%= link_to 'Details', meuble_path(meuble) %>
-            </div>
-            <div class="d-flex align-items-center justify-content-center">
-              <%= cl_image_tag meuble.photos.first.key, height: 150, width: 150, crop: :fill if meuble.photos.first %>
-            </div>
+
+        <div class="cards grow d-flex justify-content-between col-xs-3 col-md-4 m-2 p-2 mx-4">
+
+                  <div class="d-flex flex-column">
+                    <%= link_to meuble_path(meuble) do  %>
+                    <p><strong><%= meuble.name %></strong></p>
+                    <p><%= meuble.daily_rate %> Euros/Day</p>
+                    <p><%= meuble.category %></p>
+                    <p><%# meuble.photo_id %></p>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center">
+                  <%= cl_image_tag meuble.photos.first.key, height: 150, width: 150, crop: :fill if meuble.photos.first %>
+                  </div>
+
+
+          </div>
+         <% end %>
+        <% end %>
         </div>
-      <% end %>
+
     </div>
-  </div>
 </div>
 
 
