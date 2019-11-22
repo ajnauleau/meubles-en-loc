@@ -4,7 +4,7 @@
     <div class="background-form mt-3 mb-3 col-12 col-lg-6">
       <%= simple_form_for(@meuble) do |f| %>
         <div class="pt-3">
-          <h2>Create your furniture</h2>
+          <h2> Add your furniture</h2>
               <%= f.input :category, collection: Meuble::CATEGORIES, prompt: 'Choose a category', label: false %>
               <%= f.input :name, placeholder: 'name', label: false %>
         </div>
