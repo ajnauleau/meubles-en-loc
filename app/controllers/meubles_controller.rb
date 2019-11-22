@@ -8,6 +8,7 @@ class MeublesController < ApplicationController
 
   def show
     @meuble = Meuble.find(params[:id])
+    @location = Location.new
   end
 
   def new
@@ -17,8 +18,11 @@ class MeublesController < ApplicationController
   def create
     @meuble = Meuble.new(meuble_params)
     @meuble.user = current_user
-    @meuble.save!
-    redirect_to profil_path
+    if @meuble.save
+      redirect_to profil_path
+    else
+      render :new
+    end
   end
 
   def filter
