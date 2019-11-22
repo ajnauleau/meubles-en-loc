@@ -17,7 +17,7 @@
           <div class="block">
               <% @meubles.each do |meuble| %>
                   <div class="cards m-4">
-                    <div class="d-flex justify-content-between col-xs-3 col-md-4 m-2 p-2">
+                    <div class="d-flex justify-content-between m-2 p-2">
                       <div class="d-flex flex-column justify-content-center pl-2">
                         <p><strong><%= meuble.name %></strong></p>
                         <p><%= meuble.daily_rate %> Euros</p>
@@ -37,7 +37,7 @@
             <% @locations.each do |location| %>
               <div class="cards m-4">
                 <p class="pt-3 pl-3"><strong><%= location.meuble.name %></strong></p>
-                <div class="d-flex justify-content-between col-xs-3 col-md-4 m-2 p-2">
+                <div class="d-flex justify-content-between m-2 p-2">
                   <div class="d-flex flex-column justify-content-center pl-2">
                     <p><strong><%= location.start_date %></strong></p>
                     <p> <strong><%= location.end_date %></strong></p>
