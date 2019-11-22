@@ -7,7 +7,7 @@
         <form action="/meubles/filter" method="post">
           <%= simple_form_for(@meuble) do |f| %>
             <%= f.input :category, collection: Meuble::CATEGORIES, label: false, prompt: 'category' %>
-            <%= f.input :daily_rate, label: false, placeholder: 'daly rate' %>
+            <%= f.input :daily_rate, label: false, placeholder: 'daily rate' %>
             <%= f.submit class:'btn btn-flat my-btn-navbar', value:'Search'%>
           <% end %>
         </form>
